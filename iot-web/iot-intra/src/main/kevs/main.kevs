@@ -1,0 +1,29 @@
+repo "http://oss.sonatype.org/content/groups/public/"
+include mvn:lu.snt.iot.web:lu.snt.iot.web.intra:1-SNAPSHOT
+include mvn:org.kevoree.library.java:org.kevoree.library.java.javaNode:RELEASE
+include mvn:org.kevoree.library.java:org.kevoree.library.java.ws:RELEASE
+include mvn:org.kevoree.library.java:org.kevoree.library.java.haproxy:RELEASE
+include mvn:lu.snt.iot.web:lu.snt.iot.web.display:1-SNAPSHOT
+include mvn:org.kevoree.library.java:org.kevoree.library.java.hazelcast:RELEASE
+
+add host : JavaNode
+set host.debug = "false"
+set host.started = "true"
+
+add host.haproxy : HAProxy
+set host.haproxy.listeningPort = "6000"
+set host.haproxy.started = "true"
+
+//add host.currentDemoPage : Demo1Page
+//set host.currentDemoPage.http_port = "6001"
+//set host.currentDemoPage.started = "true"
+
+add host.mainPage : MainPage
+set host.mainPage.logLevel = "TRACE"
+set host.mainPage.started = "true"
+
+add group401045855 : WSGroup
+set group401045855.port/host = "9000"
+set group401045855.started = "true"
+attach host group401045855
+

@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" media="screen" href="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/cascade.css" />
+<!--[if IE 6]><link rel="stylesheet" type="text/css" media="screen" href="/luci-static/openwrt.org/ie6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" media="screen" href="/luci-static/openwrt.org/ie7.css" /><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" type="text/css" media="screen" href="/luci-static/openwrt.org/ie8.css" /><![endif]-->
+<script type="text/javascript" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/xhr.js" />
+<title>IoT-Lab-R01 - Interfaces - LuCI</title>
+</head>
+<body class="lang_en">
+
+<p class="skiplink">
+<span id="skiplink1"><a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/wan#navigation">Skip to navigation</a></span>
+<span id="skiplink2"><a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/wan#content">Skip to content</a></span>
+</p>
+
+<div id="menubar">
+<h2 class="navigation"><a id="navigation" name="navigation">Navigation</a></h2>
+
+<div class="hostinfo">
+	IoT-Lab-R01 | OpenWrt Backfire 10.03.1 |
+	Load: 0.31 0.17 0.06
+	<span id="xhr_poll_status" style="" onclick="XHR.running() ? XHR.halt() : XHR.run()">
+		| Auto Refresh:
+		<span id="xhr_poll_status_on">on</span>
+		<span id="xhr_poll_status_off" style="display: none;">off</span>
+	</span>
+</div>
+
+
+
+<div id="savemenu">
+	<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/wan#">Changes: 0</a>
+	</div>
+
+<div class="clear" />
+</div>
+
+<div id="maincontainer">
+	<div id="tabmenu">
+		
+	<div class="tabmenu1">
+	<ul class="tabmenu l1">
+		
+			<li class="tabmenu-item-status">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/status/">Status</a>
+			</li>
+		
+			<li class="tabmenu-item-system">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/system/">System</a>
+			</li>
+		
+			<li class="tabmenu-item-network active">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/">Network</a>
+			</li>
+		
+			<li class="tabmenu-item-logout">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/logout/">Logout</a>
+			</li>
+		
+	</ul>
+	<br style="clear:both" />
+
+	<div class="tabmenu2">
+	<ul class="tabmenu l2">
+		
+			<li class="tabmenu-item-network active">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/">Interfaces</a>
+			</li>
+		
+			<li class="tabmenu-item-wireless">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/wireless/">Wifi</a>
+			</li>
+		
+			<li class="tabmenu-item-vlan">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/vlan/">Switch</a>
+			</li>
+		
+			<li class="tabmenu-item-dhcp">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/dhcp/">DHCP and DNS</a>
+			</li>
+		
+			<li class="tabmenu-item-hosts">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/hosts/">Hostnames</a>
+			</li>
+		
+			<li class="tabmenu-item-routes">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/routes/">Static Routes</a>
+			</li>
+		
+			<li class="tabmenu-item-firewall">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/firewall/">Firewall</a>
+			</li>
+		
+			<li class="tabmenu-item-diagnostics">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/diagnostics/">Diagnostics</a>
+			</li>
+		
+	</ul>
+	<br style="clear:both" />
+
+	<div class="tabmenu3">
+	<ul class="tabmenu l3">
+		
+			<li class="tabmenu-item-wan active">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/wan/">WAN</a>
+			</li>
+		
+			<li class="tabmenu-item-lan">
+				<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/lan/">LAN</a>
+			</li>
+		
+	</ul>
+	<br style="clear:both" />
+
+	</div>
+
+	</div>
+
+	</div>
+
+	</div>
+
+	<div id="maincontent">
+		<noscript>
+			<div class="errorbox">
+				<strong>Java Script required!</strong><br />
+				You must enable Java Script in your browser or LuCI will not work properly.
+			</div>
+		</noscript>
+
+<form method="post" name="cbi" action="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/IoT-Lab-R01 - Interfaces - LuCI.xhtml.html" enctype="multipart/form-data" onreset="return cbi_validate_reset(this)" onsubmit="return cbi_validate_form(this, &apos;Some fields are invalid, cannot save values!&apos;)">
+	<div>
+		<script type="text/javascript" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/cbi.js" />
+		<input type="hidden" name="cbi.submit" value="1" />
+		<input type="submit" value="Save" class="hidden" />
+	</div>
+
+<div class="cbi-map" id="cbi-network">
+	<h2><a id="content" name="content">Interfaces - WAN</a></h2>
+	<div class="cbi-map-descr">On this page you can configure the network interfaces. You can bridge several interfaces by ticking the "bridge interfaces" field and enter the names of several network interfaces separated by spaces. You can also use <abbr title="Virtual Local Area Network">VLAN</abbr> notation <samp>INTERFACE.VLANNR</samp> (<abbr title="for example">e.g.</abbr>: <samp>eth0.1</samp>).</div>
+<fieldset class="cbi-section" id="cbi-apply-network" style="display: none;">
+	<legend>Applying changes</legend>
+	<script type="text/javascript">//<![CDATA[
+		var apply_xhr = new XHR();
+
+		apply_xhr.get('/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/servicectl/restart/network,wireless,firewall,dhcp', null,
+			function() {
+				var checkfinish = function() {
+					apply_xhr.get('/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/servicectl/status', null,
+						function(x) {
+							if( x.responseText == 'finish' )
+							{
+								var e = document.getElementById('cbi-apply-network-status');
+								if( e )
+								{
+									e.innerHTML = 'Configuration applied.';
+									window.setTimeout(function() {
+										e.parentNode.style.display = 'none';
+										
+									}, 1000);
+								}
+							}
+							else
+							{
+								var e = document.getElementById('cbi-apply-network-status');
+								if( e && x.responseText ) e.innerHTML = x.responseText;
+
+								window.setTimeout(checkfinish, 1000);
+							}
+						}
+					);
+				}
+
+				window.setTimeout(checkfinish, 1000);
+			}
+		);
+	//]]></script>
+
+	<img src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/loading.gif" alt="Loading" style="vertical-align:middle" />
+	<span id="cbi-apply-network-status">Configuration applied.</span>
+</fieldset>
+	<fieldset class="cbi-section" id="cbi-network-wan">
+		<legend>Common Configuration</legend>
+		
+		
+		
+	<ul class="cbi-tabmenu">
+
+		<script type="text/javascript">cbi_c['container.network.wan.general'] = 8;</script>
+		<li id="tab.network.wan.general" class="cbi-tab">
+			<a onclick="this.blur(); return cbi_t_switch(&apos;network.wan&apos;, &apos;general&apos;)" href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/wan?tab.network.wan=general">General Setup</a>
+			<input type="hidden" id="tab.network.wan" name="tab.network.wan" value="general" />
+		</li>
+	
+		<script type="text/javascript">cbi_c['container.network.wan.advanced'] = 4;</script>
+		<li id="tab.network.wan.advanced" class="cbi-tab-disabled">
+			<a onclick="this.blur(); return cbi_t_switch(&apos;network.wan&apos;, &apos;advanced&apos;)" href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/wan?tab.network.wan=advanced">Advanced Settings</a>
+			
+		</li>
+	
+		<script type="text/javascript">cbi_c['container.network.wan.physical'] = 4;</script>
+		<li id="tab.network.wan.physical" class="cbi-tab-disabled">
+			<a onclick="this.blur(); return cbi_t_switch(&apos;network.wan&apos;, &apos;physical&apos;)" href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/wan?tab.network.wan=physical">Physical Settings</a>
+			
+		</li>
+	
+		<script type="text/javascript">cbi_c['container.network.wan.firewall'] = 1;</script>
+		<li id="tab.network.wan.firewall" class="cbi-tab-disabled">
+			<a onclick="this.blur(); return cbi_t_switch(&apos;network.wan&apos;, &apos;firewall&apos;)" href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/wan?tab.network.wan=firewall">Firewall Settings</a>
+			
+		</li>
+	</ul>
+
+		<div class="cbi-section-node cbi-section-node-tabbed" id="cbi-network-wan">
+			
+
+
+	
+	<div class="cbi-tabcontainer" id="container.network.wan.firewall" style="display:none">
+		
+		<div class="cbi-value cbi-value-last" id="cbi-network-wan-_fwzone"><label class="cbi-value-title" for="cbid.network.wan._fwzone">Create / Assign firewall-zone</label>
+		<div class="cbi-value-field">
+
+<ul style="margin:0; list-style-type:none; text-align:left">
+	
+	
+	<li style="padding:0.5em">
+		<input class="cbi-input-radio" onclick="cbi_d_update(this.id)" onchange="cbi_d_update(this.id)" type="radio" id="cbid.network.wan._fwzone.lan" name="cbid.network.wan._fwzone" value="lan" />  
+		<label for="cbid.network.wan._fwzone.lan" style="background-color:#90f090; padding:0.5em">
+			<strong>lan:</strong>
+			
+				 <span style="background-color:#FFFFFF; border:1px solid #CCCCCC; padding:2px">lan:
+					<img title="VLAN Interface: &quot;eth0.0&quot;" style="width:16px; height:16px; vertical-align:middle" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/vlan.png" />
+				
+					<img title="Wireless Network: Master &quot;IoTLab&quot;" style="width:16px; height:16px; vertical-align:middle" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/wifi.png" />
+				
+				
+				</span>
+			
+			
+		</label>
+	</li>
+	
+	<li style="padding:0.5em">
+		<input class="cbi-input-radio" onclick="cbi_d_update(this.id)" onchange="cbi_d_update(this.id)" type="radio" id="cbid.network.wan._fwzone.wan" name="cbid.network.wan._fwzone" value="wan" checked="checked" />  
+		<label for="cbid.network.wan._fwzone.wan" style="background-color:#f09090; padding:0.5em">
+			<strong>wan:</strong>
+			
+				 <span style="background-color:#FFFFFF; border:1px solid #000000; padding:2px; font-weight:bold">wan:
+					<img title="VLAN Interface: &quot;eth0.1&quot;" style="width:16px; height:16px; vertical-align:middle" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/vlan.png" />
+				
+				
+				</span>
+			
+			
+		</label>
+	</li>
+	
+
+	
+	<li style="padding:0.5em">
+		<input class="cbi-input-radio" onclick="cbi_d_update(this.id)" onchange="cbi_d_update(this.id)" type="radio" id="cbid.network.wan._fwzone_new" name="cbid.network.wan._fwzone" value="-" />  
+		<div style="background-color:#eeeeee; padding:0.5em; display:inline">
+			<label for="cbid.network.wan._fwzone_new"><em>unspecified -or- create: </em></label>
+			<input style="width:6em" type="text" name="cbid.network.wan._fwzone.newzone" onfocus="document.getElementById(&apos;cbid.network.wan._fwzone_new&apos;).checked=true" />
+		</div>
+	</li>
+	
+</ul>
+
+		<br />
+			<div class="cbi-value-description">
+				<span class="cbi-value-helpicon"><img src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/help.gif" alt="help" /></span>
+				Choose the firewall zone you want to assign to this interface. Select <em>unspecified</em> to remove the interface from the associated zone or fill out the <em>create</em> field to define a new zone and attach the interface to it.
+			</div>
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-_fwzone">
+		
+		cbi_d_add("cbi-network-wan-_fwzone", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-_fwzone");
+	</script>
+
+
+
+	</div>
+	<script type="text/javascript">cbi_t_add('network.wan', 'firewall')</script>
+
+	<div class="cbi-tabcontainer" id="container.network.wan.physical" style="display:none">
+		
+		<div class="cbi-value" id="cbi-network-wan-type"><label class="cbi-value-title" for="cbid.network.wan.type">Bridge interfaces</label>
+		<div class="cbi-value-field">
+
+	<input type="hidden" value="1" name="cbi.cbe.network.wan.type" />
+	<input class="cbi-input-checkbox" onclick="cbi_d_update(this.id)" onchange="cbi_d_update(this.id)" type="checkbox" id="cbid.network.wan.type" name="cbid.network.wan.type" value="bridge" />
+		
+			<div class="cbi-value-description">
+				<span class="cbi-value-helpicon"><img src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/help.gif" alt="help" /></span>
+				creates a bridge over specified interface(s)
+			</div>
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-type">
+		
+		cbi_d_add("cbi-network-wan-type", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-type");cbi_d_add("cbi-network-wan-type", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-type");cbi_d_add("cbi-network-wan-type", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-type");
+	</script>
+
+
+
+
+
+<script type="text/javascript" id="cbip-network-wan-stp">
+		
+		cbi_d_add("cbi-network-wan-stp", {"cbid.network.wan.proto":"static","cbid.network.wan.type":"bridge"}, "cbip-network-wan-stp");
+	</script>
+
+
+<div class="cbi-value cbi-value-last" id="cbi-network-wan-ifname_single"><label class="cbi-value-title" for="cbid.network.wan.ifname_single">Interface</label>
+		<div class="cbi-value-field">
+
+<input type="hidden" name="cbi.cbe.network.wan.ifname_single" value="1" />
+<ul style="margin:0; list-style-type:none">
+	
+	<li>
+		<input class="cbi-input-radio" onclick="cbi_d_update(this.id)" onchange="cbi_d_update(this.id)" type="radio" id="cbid.network.wan.ifname_single.eth0" name="cbid.network.wan.ifname_single" value="eth0" />  
+		<label for="cbid.network.wan.ifname_single.eth0">
+			<img title="Ethernet Switch" style="width:16px; height:16px; vertical-align:middle" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/switch.png" />
+			Ethernet Switch: "eth0"
+		</label>
+	</li>
+	
+	<li>
+		<input class="cbi-input-radio" onclick="cbi_d_update(this.id)" onchange="cbi_d_update(this.id)" type="radio" id="cbid.network.wan.ifname_single.eth0.0" name="cbid.network.wan.ifname_single" value="eth0.0" />  
+		<label for="cbid.network.wan.ifname_single.eth0.0">
+			<img title="VLAN Interface" style="width:16px; height:16px; vertical-align:middle" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/vlan.png" />
+			VLAN Interface: "eth0.0" (<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/lan">lan</a>)
+		</label>
+	</li>
+	
+	<li>
+		<input class="cbi-input-radio" onclick="cbi_d_update(this.id)" onchange="cbi_d_update(this.id)" type="radio" id="cbid.network.wan.ifname_single.eth0.1" name="cbid.network.wan.ifname_single" value="eth0.1" checked="checked" />  
+		<label for="cbid.network.wan.ifname_single.eth0.1">
+			<img title="VLAN Interface" style="width:16px; height:16px; vertical-align:middle" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/vlan.png" />
+			VLAN Interface: "eth0.1" (<a href="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/IoT-Lab-R01 - Interfaces - LuCI.xhtml.html">wan</a>)
+		</label>
+	</li>
+	
+	<li>
+		<input class="cbi-input-radio" onclick="cbi_d_update(this.id)" onchange="cbi_d_update(this.id)" type="radio" id="cbid.network.wan.ifname_single.wl0" name="cbid.network.wan.ifname_single" value="wl0" />  
+		<label for="cbid.network.wan.ifname_single.wl0">
+			<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/wireless/wl0.network1"><img title="Wireless Adapter" style="width:16px; height:16px; vertical-align:middle" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/wifi.png" />
+			</a>Wireless Network: Master "IoTLab" (<a href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/lan">lan</a>)
+		</label>
+	</li>
+	
+	
+	<li>
+		<input class="cbi-input-radio" onclick="cbi_d_update(this.id)" onchange="cbi_d_update(this.id)" type="radio" id="cbid.network.wan.ifname_single_custom" name="cbid.network.wan.ifname_single" value=" " />  
+		<label for="cbid.network.wan.ifname_single_custom">
+			<img title="Custom Interface" style="width:16px; height:16px; vertical-align:middle" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/ethernet_disabled.png" />
+			Custom Interface:
+		</label>
+		<input type="text" style="width:50px" onfocus="document.getElementById(&apos;cbid.network.wan.ifname_single_custom&apos;).checked=true" onblur="var x=document.getElementById(&apos;cbid.network.wan.ifname_single_custom&apos;); x.value=this.value; x.checked=true" />
+	</li>
+	
+</ul>
+
+		
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-ifname_single">
+		
+		cbi_d_add("cbi-network-wan-ifname_single", {"cbid.network.wan.proto":"static","cbid.network.wan.type":""}, "cbip-network-wan-ifname_single");
+	</script>
+
+
+
+
+
+<script type="text/javascript" id="cbip-network-wan-ifname_multi">
+		
+		cbi_d_add("cbi-network-wan-ifname_multi", {"cbid.network.wan.proto":"static","cbid.network.wan.type":"bridge"}, "cbip-network-wan-ifname_multi");
+	</script>
+
+
+
+	</div>
+	<script type="text/javascript">cbi_t_add('network.wan', 'physical')</script>
+
+	<div class="cbi-tabcontainer" id="container.network.wan.general">
+		
+		<div class="cbi-value" id="cbi-network-wan-__status"><label class="cbi-value-title" for="cbid.network.wan.__status">Status</label>
+		<div class="cbi-value-field">
+
+
+<script type="text/javascript">//<![CDATA[
+	XHR.poll(5, '/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/iface_status/wan', null,
+		function(x, ifc)
+		{
+			if (ifc && (ifc = ifc[0]))
+			{
+				var html = '';
+
+				var s = document.getElementById('__status-ifc-signal');
+				if (s)
+					s.innerHTML = String.format(
+						'<im]]><![CDATA[g src="/luci-static/resources/icons/%s%s.png" style="width:16px; height:16px" />' +
+						'<br /><small>%s</small>',
+							ifc.type, ifc.is_up ? '' : '_disabled',
+							ifc.name
+					);
+
+				var d = document.getElementById('__status-ifc-description');
+				if (d && ifc.ifname)
+				{
+					if (ifc.is_up)
+					{
+						html += String.format('<strong>Uptime:</strong> %t<br />', ifc.uptime);
+					}
+
+					if (ifc.type != 'tunnel')
+					{
+						html += String.format('<strong>MAC Address:</strong> %s<br />', ifc.macaddr);
+					}
+
+					html += String.format(
+						'<strong>RX</strong>: %.2mB (%d Pkts.)<br />' +
+						'<strong>TX</strong>: %.2mB (%d Pkts.)<br />',
+							ifc.rx_bytes, ifc.rx_packets,
+							ifc.tx_bytes, ifc.tx_packets
+					);
+
+					if (ifc.ipaddrs && ifc.ipaddrs.length)
+					{
+						html += '<strong>IPv4: </strong>';
+
+						for (var i = 0; i < ifc.ipaddrs.length; i++)
+							html += String.format(
+								'%s%s/%d',
+								i ? ', ' : '',
+								ifc.ipaddrs[i].addr,
+								ifc.ipaddrs[i].prefix
+							);
+
+						html += '<br />';
+					}
+
+					if (ifc.ip6addrs && ifc.ip6addrs.length)
+					{
+						html += '<strong>IPv6: </strong>';
+
+						for (var i = 0; i < ifc.ip6addrs.length; i++)
+							html += String.format(
+								'%s%s/%d',
+								i ? ', ' : '',
+								ifc.ip6addrs[i].addr.toUpperCase(),
+								ifc.ip6addrs[i].prefix
+							);
+
+						html += '<br />';
+					}
+
+					d.innerHTML = html;
+				}
+				else if (d)
+				{
+					d.innerHTML = '<em>Interface not present or not connected yet.</em>';
+				}
+			}
+		}
+	);
+//]]></script>
+
+<table>
+	<tr class="cbi-section-table">
+		<td />
+		<td class="cbi-value-field" style="min-width:16px; padding:3px; text-align:center" id="__status-ifc-signal"><img src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/vlan.png" style="width:16px; height:16px" /><br /><small>eth0.1</small></td>
+		<td class="cbi-value-field" style="vertical-align:middle; text-align:left; padding:3px" id="__status-ifc-description"><strong>Uptime:</strong> 0h 1m 50s<br /><strong>MAC Address:</strong> 58:6D:8F:B0:F1:84<br /><strong>RX</strong>: 50.40 KB (387 Pkts.)<br /><strong>TX</strong>: 7.82 KB (170 Pkts.)<br /><strong>IPv4: </strong>10.101.0.63/16<br /></td>
+	</tr>
+</table>
+
+		
+</div></div>
+
+
+
+
+
+<div class="cbi-value" id="cbi-network-wan-proto"><label class="cbi-value-title" for="cbid.network.wan.proto">Protocol</label>
+		<div class="cbi-value-field">
+
+
+	<select class="cbi-input-select" onchange="cbi_d_update(this.id)" id="cbid.network.wan.proto" name="cbid.network.wan.proto" size="1">
+	<option id="cbi-network-wan-proto-static" value="static" selected="selected">Static address</option><option id="cbi-network-wan-proto-dhcp" value="dhcp">DHCP client</option><option id="cbi-network-wan-proto-none" value="none">Unmanaged</option><option id="cbi-network-wan-proto-ppp" value="ppp">PPP</option><option id="cbi-network-wan-proto-pptp" value="pptp">PPtP</option><option id="cbi-network-wan-proto-pppoe" value="pppoe">PPPoE</option><option id="cbi-network-wan-proto-pppoa" value="pppoa">PPPoATM</option><option id="cbi-network-wan-proto-3g" value="3g">UMTS/GPRS/EV-DO</option>
+	</select>
+
+		
+</div></div>
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="cbip-network-wan-_switch">
+		
+		cbi_d_add("cbi-network-wan-_switch", {"cbid.network.wan.proto":"dhcp"}, "cbip-network-wan-_switch");cbi_d_add("cbi-network-wan-_switch", {"cbid.network.wan.proto":"none"}, "cbip-network-wan-_switch");cbi_d_add("cbi-network-wan-_switch", {"cbid.network.wan.proto":"ppp"}, "cbip-network-wan-_switch");cbi_d_add("cbi-network-wan-_switch", {"cbid.network.wan.proto":"pptp"}, "cbip-network-wan-_switch");cbi_d_add("cbi-network-wan-_switch", {"cbid.network.wan.proto":"pppoe"}, "cbip-network-wan-_switch");cbi_d_add("cbi-network-wan-_switch", {"cbid.network.wan.proto":"pppoa"}, "cbip-network-wan-_switch");cbi_d_add("cbi-network-wan-_switch", {"cbid.network.wan.proto":"3g"}, "cbip-network-wan-_switch");
+	</script>
+
+
+<div class="cbi-value" id="cbi-network-wan-ipaddr"><label class="cbi-value-title" for="cbid.network.wan.ipaddr">IPv4 address</label>
+		<div class="cbi-value-field">
+
+	<input type="text" class="cbi-input-text" onchange="cbi_d_update(this.id)" name="cbid.network.wan.ipaddr" id="cbid.network.wan.ipaddr" value="10.101.0.63" cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="ip4addr" cbi_optional="true" />
+	
+	<script type="text/javascript">
+		
+		cbi_validate_field('cbid.network.wan.ipaddr', true, 'ip4addr');
+	</script>
+			
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-ipaddr">
+		
+		cbi_d_add("cbi-network-wan-ipaddr", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-ipaddr");
+	</script>
+
+
+<div class="cbi-value" id="cbi-network-wan-netmask"><label class="cbi-value-title" for="cbid.network.wan.netmask">IPv4 netmask</label>
+		<div class="cbi-value-field">
+
+	<input type="text" class="cbi-input-text" onchange="cbi_d_update(this.id)" name="cbid.network.wan.netmask" id="cbid.network.wan.netmask" value="255.255.0.0" cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="ip4addr" cbi_optional="true" style="display: none;" /><select id="cbi.combobox.cbid.network.wan.netmask" class="cbi-input-select" cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="ip4addr" cbi_optional="true"><option value="255.255.255.0">255.255.255.0</option><option value="255.255.0.0">255.255.0.0</option><option value="255.0.0.0">255.0.0.0</option><option value="">-- custom --</option></select>
+	
+	<script type="text/javascript">
+		cbi_combobox_init('cbid.network.wan.netmask', {"255.255.255.0":"255.255.255.0","255.255.0.0":"255.255.0.0","255.0.0.0":"255.0.0.0"}, '', '-- custom --');
+		cbi_validate_field('cbid.network.wan.netmask', true, 'ip4addr');
+	</script>
+			
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-netmask">
+		
+		cbi_d_add("cbi-network-wan-netmask", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-netmask");
+	</script>
+
+
+<div class="cbi-value" id="cbi-network-wan-gateway"><label class="cbi-value-title" for="cbid.network.wan.gateway">IPv4 gateway</label>
+		<div class="cbi-value-field">
+
+	<input type="text" class="cbi-input-text" onchange="cbi_d_update(this.id)" name="cbid.network.wan.gateway" id="cbid.network.wan.gateway" value="10.101.0.1" cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="ip4addr" cbi_optional="true" />
+	
+	<script type="text/javascript">
+		
+		cbi_validate_field('cbid.network.wan.gateway', true, 'ip4addr');
+	</script>
+			
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-gateway">
+		
+		cbi_d_add("cbi-network-wan-gateway", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-gateway");
+	</script>
+
+
+<div class="cbi-value" id="cbi-network-wan-broadcast"><label class="cbi-value-title" for="cbid.network.wan.broadcast">IPv4 broadcast</label>
+		<div class="cbi-value-field">
+
+	<input type="text" class="cbi-input-text" onchange="cbi_d_update(this.id)" name="cbid.network.wan.broadcast" id="cbid.network.wan.broadcast" value="" cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="ip4addr" cbi_optional="true" />
+	
+	<script type="text/javascript">
+		
+		cbi_validate_field('cbid.network.wan.broadcast', true, 'ip4addr');
+	</script>
+			
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-broadcast">
+		
+		cbi_d_add("cbi-network-wan-broadcast", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-broadcast");
+	</script>
+
+
+<div class="cbi-value cbi-value-last" id="cbi-network-wan-dns"><label class="cbi-value-title" for="cbid.network.wan.dns">Use custom DNS servers</label>
+		<div class="cbi-value-field">
+
+<div>
+
+	<input class="cbi-input-text" value="8.8.8.8" onchange="cbi_d_update(this.id)" type="text" id="cbid.network.wan.dns.1" name="cbid.network.wan.dns" cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="ipaddr" cbi_optional="true" /><img class="cbi-image-button" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/remove.gif" /><br />
+
+	<input class="cbi-input-text" value="8.8.4.4" onchange="cbi_d_update(this.id)" type="text" id="cbid.network.wan.dns.2" name="cbid.network.wan.dns" cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="ipaddr" cbi_optional="true" /><img class="cbi-image-button" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/remove.gif" /><br />
+
+	<input class="cbi-input-text" value="158.64.1.25" onchange="cbi_d_update(this.id)" type="text" id="cbid.network.wan.dns.3" name="cbid.network.wan.dns" cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="ipaddr" cbi_optional="true" /><img class="cbi-image-button" src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/add.gif" /><br />
+
+</div>
+<script type="text/javascript">
+cbi_dynlist_init('cbid.network.wan.dns', '/luci-static/resources');
+cbi_validate_field('cbid.network.wan.dns.1', true, 'ipaddr');cbi_validate_field('cbid.network.wan.dns.2', true, 'ipaddr');cbi_validate_field('cbid.network.wan.dns.3', true, 'ipaddr');cbi_validate_field('cbid.network.wan.dns.4', true, 'ipaddr');
+</script>
+		
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-dns">
+		
+		cbi_d_add("cbi-network-wan-dns", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-dns");
+	</script>
+
+
+
+	</div>
+	<script type="text/javascript">cbi_t_add('network.wan', 'general')</script>
+
+	<div class="cbi-tabcontainer" id="container.network.wan.advanced" style="display:none">
+		
+		<div class="cbi-value" id="cbi-network-wan-auto"><label class="cbi-value-title" for="cbid.network.wan.auto">Bring up on boot</label>
+		<div class="cbi-value-field">
+
+	<input type="hidden" value="1" name="cbi.cbe.network.wan.auto" />
+	<input class="cbi-input-checkbox" onclick="cbi_d_update(this.id)" onchange="cbi_d_update(this.id)" type="checkbox" id="cbid.network.wan.auto" name="cbid.network.wan.auto" value="1" checked="checked" />
+		
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-auto">
+		
+		cbi_d_add("cbi-network-wan-auto", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-auto");
+	</script>
+
+
+<div class="cbi-value" id="cbi-network-wan-macaddr"><label class="cbi-value-title" for="cbid.network.wan.macaddr">Override MAC address</label>
+		<div class="cbi-value-field">
+
+	<input type="text" class="cbi-input-text" onchange="cbi_d_update(this.id)" name="cbid.network.wan.macaddr" id="cbid.network.wan.macaddr" value="" placeholder="58:6D:8F:B0:F1:84" cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="macaddr" cbi_optional="true" />
+	
+	<script type="text/javascript">
+		
+		cbi_validate_field('cbid.network.wan.macaddr', true, 'macaddr');
+	</script>
+			
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-macaddr">
+		
+		cbi_d_add("cbi-network-wan-macaddr", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-macaddr");
+	</script>
+
+
+<div class="cbi-value" id="cbi-network-wan-mtu"><label class="cbi-value-title" for="cbid.network.wan.mtu">Override MTU</label>
+		<div class="cbi-value-field">
+
+	<input type="text" class="cbi-input-text" onchange="cbi_d_update(this.id)" name="cbid.network.wan.mtu" id="cbid.network.wan.mtu" value="" placeholder="1500" cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="max" cbi_optional="true" />
+	
+	<script type="text/javascript">
+		
+		cbi_validate_field('cbid.network.wan.mtu', true, 'max(1500)');
+	</script>
+			
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-mtu">
+		
+		cbi_d_add("cbi-network-wan-mtu", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-mtu");
+	</script>
+
+
+<div class="cbi-value cbi-value-last" id="cbi-network-wan-metric"><label class="cbi-value-title" for="cbid.network.wan.metric">Use gateway metric</label>
+		<div class="cbi-value-field">
+
+	<input type="text" class="cbi-input-text" onchange="cbi_d_update(this.id)" name="cbid.network.wan.metric" id="cbid.network.wan.metric" value="" placeholder="0" cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="uinteger" cbi_optional="true" />
+	
+	<script type="text/javascript">
+		
+		cbi_validate_field('cbid.network.wan.metric', true, 'uinteger');
+	</script>
+			
+</div></div>
+
+
+<script type="text/javascript" id="cbip-network-wan-metric">
+		
+		cbi_d_add("cbi-network-wan-metric", {"cbid.network.wan.proto":"static"}, "cbip-network-wan-metric");
+	</script>
+
+
+
+	</div>
+	<script type="text/javascript">cbi_t_add('network.wan', 'advanced')</script>
+
+
+
+
+
+
+
+
+		</div>
+		<br />
+	</fieldset>
+
+<!-- /nsection -->
+<fieldset class="cbi-section" id="cbi-network-alias">
+	<legend>IP-Aliases</legend>
+	<div class="cbi-section-descr" />
+	
+
+	<em>This section contains no values yet<br /><br /></em>
+
+	<div class="cbi-section-create">
+			
+				<input type="text" class="cbi-section-create-name" id="cbi.cts.network.alias." name="cbi.cts.network.alias." cbi_validate="function ()
+		{
+			// is not detached
+			if( field.form )
+			{
+				field.className = field.className.replace(/ cbi-input-invalid/g, &apos;&apos;);
+
+				// validate value
+				var value = (field.options &amp;&amp; field.options.selectedIndex &gt; -1)
+					? field.options[field.options.selectedIndex].value : field.value;
+
+				if( !(((value.length == 0) &amp;&amp; optional) || vldcb(value, vargs)) )
+				{
+					// invalid
+					field.className += &apos; cbi-input-invalid&apos;;
+					return false;
+				}
+			}
+
+			return true;
+		}" cbi_datatype="uciname" cbi_optional="true" />
+				<script type="text/javascript">cbi_validate_field('cbi.cts.network.alias.', true, 'uciname');</script>
+				<input type="submit" class="cbi-button cbi-button-add" onclick="this.form.cbi_state=&apos;add-section&apos;; return true" value="Add" />
+				
+
+		</div>
+
+</fieldset>
+
+	<br />
+</div>
+
+<div class="cbi-map" id="cbi-dhcp">
+	
+	
+<fieldset class="cbi-section" id="cbi-dhcp-dhcp">
+	<legend>DHCP Server</legend>
+	<div class="cbi-section-descr" />
+	
+
+
+		
+	<ul class="cbi-tabmenu">
+
+		<script type="text/javascript">cbi_c['container.dhcp.wan.general'] = 4;</script>
+		<li id="tab.dhcp.wan.general" class="cbi-tab">
+			<a onclick="this.blur(); return cbi_t_switch(&apos;dhcp.wan&apos;, &apos;general&apos;)" href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/wan?tab.dhcp.wan=general">General Setup</a>
+			<input type="hidden" id="tab.dhcp.wan" name="tab.dhcp.wan" value="general" />
+		</li>
+	
+		<script type="text/javascript">cbi_c['container.dhcp.wan.advanced'] = 4;</script>
+		<li id="tab.dhcp.wan.advanced" class="cbi-tab-disabled" style="display: none;">
+			<a onclick="this.blur(); return cbi_t_switch(&apos;dhcp.wan&apos;, &apos;advanced&apos;)" href="http://192.168.3.1/cgi-bin/luci/;stok=10bc0599bd4ac811e949f96c96250896/admin/network/network/wan?tab.dhcp.wan=advanced">Advanced Settings</a>
+			
+		</li>
+	</ul>
+
+
+		<fieldset class="cbi-section-node cbi-section-node-tabbed" id="cbi-dhcp-wan">
+			
+
+
+	
+	<div class="cbi-tabcontainer" id="container.dhcp.wan.general">
+		
+		<div class="cbi-value cbi-value-last" id="cbi-dhcp-wan-ignore"><label class="cbi-value-title" for="cbid.dhcp.wan.ignore">Ignore interface</label>
+		<div class="cbi-value-field">
+
+	<input type="hidden" value="1" name="cbi.cbe.dhcp.wan.ignore" />
+	<input class="cbi-input-checkbox" onclick="cbi_d_update(this.id)" onchange="cbi_d_update(this.id)" type="checkbox" id="cbid.dhcp.wan.ignore" name="cbid.dhcp.wan.ignore" value="1" checked="checked" />
+		
+			<div class="cbi-value-description">
+				<span class="cbi-value-helpicon"><img src="./IoT-Lab-R01 - Interfaces - LuCI.xhtml_files/help.gif" alt="help" /></span>
+				Disable <abbr title="Dynamic Host Configuration Protocol">DHCP</abbr> for this interface.
+			</div>
+</div></div>
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="cbip-dhcp-wan-start">
+		
+		cbi_d_add("cbi-dhcp-wan-start", {"cbid.dhcp.wan.ignore":""}, "cbip-dhcp-wan-start");
+	</script>
+
+
+
+
+
+<script type="text/javascript" id="cbip-dhcp-wan-limit">
+		
+		cbi_d_add("cbi-dhcp-wan-limit", {"cbid.dhcp.wan.ignore":""}, "cbip-dhcp-wan-limit");
+	</script>
+
+
+
+
+
+<script type="text/javascript" id="cbip-dhcp-wan-leasetime">
+		
+		cbi_d_add("cbi-dhcp-wan-leasetime", {"cbid.dhcp.wan.ignore":""}, "cbip-dhcp-wan-leasetime");
+	</script>
+
+
+
+	</div>
+	<script type="text/javascript">cbi_t_add('dhcp.wan', 'general')</script>
+
+	<div class="cbi-tabcontainer" id="container.dhcp.wan.advanced" style="display:none">
+		
+		
+
+
+<script type="text/javascript" id="cbip-dhcp-wan-dynamicdhcp">
+		
+		cbi_d_add("cbi-dhcp-wan-dynamicdhcp", {"cbid.dhcp.wan.ignore":""}, "cbip-dhcp-wan-dynamicdhcp");
+	</script>
+
+
+
+
+
+<script type="text/javascript" id="cbip-dhcp-wan-force">
+		
+		cbi_d_add("cbi-dhcp-wan-force", {"cbid.dhcp.wan.ignore":""}, "cbip-dhcp-wan-force");
+	</script>
+
+
+
+
+
+<script type="text/javascript" id="cbip-dhcp-wan-netmask">
+		
+		cbi_d_add("cbi-dhcp-wan-netmask", {"cbid.dhcp.wan.ignore":""}, "cbip-dhcp-wan-netmask");
+	</script>
+
+
+
+
+
+<script type="text/javascript" id="cbip-dhcp-wan-dhcp_option">
+		
+		cbi_d_add("cbi-dhcp-wan-dhcp_option", {"cbid.dhcp.wan.ignore":""}, "cbip-dhcp-wan-dhcp_option");
+	</script>
+
+
+
+	</div>
+	<script type="text/javascript">cbi_t_add('dhcp.wan', 'advanced')</script>
+
+
+
+
+
+
+
+
+		</fieldset>
+		<br />
+
+	
+
+	
+</fieldset>
+
+	<br />
+</div>
+	<div class="cbi-page-actions">
+		
+
+		
+		
+			<input class="cbi-button cbi-button-apply" type="submit" name="cbi.apply" value="Save &amp; Apply" />
+		
+		<input class="cbi-button cbi-button-save" type="submit" value="Save" />
+		<input class="cbi-button cbi-button-reset" type="reset" value="Reset" />
+
+		<script type="text/javascript">cbi_d_update();</script>
+	</div></form>
+<div class="clear" />
+</div>
+</div>
+
+<p class="luci">Powered by LuCI 0.10.0 Release (0.10.0)</p>
+</body>
+</html>
